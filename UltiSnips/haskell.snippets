@@ -1,0 +1,14 @@
+snippet deprecated "deprecated pragma" b
+{-# DEPRECATED $1 "${2:msg}" #-}
+endsnippet
+
+snippet warning "warning pragma" b
+{-# WARNING $1 "${2:msg}" #-}
+endsnippet
+
+snippet module "module" b
+module ${1:`!v haskell#util#getModuleName()`}
+	( $2
+	) where
+
+endsnippet

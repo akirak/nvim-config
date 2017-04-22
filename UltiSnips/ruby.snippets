@@ -1,0 +1,5 @@
+snippet vagrant-ansible "configuration for ansible in Vagrantfile" b
+config.vm.provision "ansible_local" do |ansible|
+	ansible.playbook = "${1:playbook.yml}"
+end
+endsnippet

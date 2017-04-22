@@ -1,0 +1,31 @@
+snippet hpack-min "Haskell package top-level" b
+name: ${1:`!v expand('%:p:h:t')`}
+version: ${2:0.0.0}
+build-type: Simple
+
+dependencies:
+	- base
+endsnippet
+
+snippet hpack-library "Haskell package library field" b
+library:
+	source-dirs: ${1:src}
+	exposed-modules:
+		- ${3:list of modules}
+endsnippet
+
+snippet hpack-executables "Haskell package executables" b
+executables:
+	${1:name}:
+		source-dirs: ${2:src}
+		main: ${3:Main.hs}
+		dependencies:
+			${4:{}}
+endsnippet
+
+snippet hpack-test "Haskell package test-suites" b
+tests:
+	${1:name}:
+		source-dirs: ${2:test}
+		main: ${3:testMain.hs}
+endsnippet
